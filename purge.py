@@ -25,8 +25,8 @@ def delete(api):
         count = 0
 
         for line in data:
-            tweet_id = line["id_str"]
-            tweet_date = line["created_at"]
+            tweet_id = line["tweet"]["id_str"]
+            tweet_date = line["tweet"]["created_at"]
 
             try:
                 print("Deleting tweet #{} ({})".format(tweet_id, tweet_date))
